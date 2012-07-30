@@ -65,6 +65,18 @@ void remove_a_double_b(char *s) {
 
 }
 int main(void) {
-	puts(""); /* prints  */
+    char buf[1024];
+    int i;
+    char *str[]={"AABBCCCDDD","AAAA","CCDD","BBCAA","ABABAA","BBB","CCCCBBB","AACCCCBBB"};
+
+
+
+    for (i=0;i<8;i++)
+    {
+        strcpy(buf,str[i]);
+        remove_a_double_b(buf);
+        //printf("Input: %s, Output %s\n",str[i],buf);
+        memset(buf,0,1024);
+    }
 	return EXIT_SUCCESS;
 }
